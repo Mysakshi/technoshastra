@@ -1,6 +1,6 @@
 import db from "@/lib/db";
 import Link from "next/link";
-import { Plus, Edit2, Trash2 } from "lucide-react";
+import { Plus, Edit2, Trash2, GraduationCap } from "lucide-react";
 import { deleteCourse } from "@/app/actions/courseActions";
 import DeleteButton from "@/components/DeleteButton";
 

@@ -6,7 +6,7 @@ export async function middleware(request) {
   const isPublicPath = path === '/admin/login';
   const isAdminPath = path.startsWith('/admin') && !isPublicPath;
   
-  const token = request.cookies.get('technoshashtra_admin_token')?.value || '';
+  const token = request.cookies.get('TechnoshastraX_admin_token')?.value || '';
 
   if (isPublicPath && token) {
     return NextResponse.redirect(new URL('/admin', request.nextUrl));

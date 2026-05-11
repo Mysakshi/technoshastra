@@ -21,11 +21,23 @@ export default function JobCard({ job }) {
             <span className="truncate">{job.skills}</span>
           </div>
         </div>
-        <p className="text-slate-600 text-sm line-clamp-3 mb-6">{job.description}</p>
+        <p className="text-slate-600 text-sm line-clamp-3 mb-6 text-justify">{job.description}</p>
       </div>
-      <button className="mt-auto block w-full text-center bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors py-2.5 rounded-lg font-medium">
-        Apply Now
-      </button>
+      {job.link ? (
+        <a
+          href={job.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-auto block w-full text-center bg-blue-600 text-white hover:bg-blue-700 transition-colors py-2.5 rounded-lg font-medium"
+        >
+          Apply Now
+        </a>
+      ) : (
+        <button className="mt-auto block w-full text-center bg-blue-600 text-white hover:bg-blue-700 transition-colors py-2.5 rounded-lg font-medium">
+          Apply Now
+        </button>
+      )
+      }
     </div>
   );
 }

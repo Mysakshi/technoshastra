@@ -26,7 +26,7 @@ export default function NewJobPage() {
             </div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-1">Company Name *</label>
-              <input type="text" id="company" name="company" required className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-shadow" placeholder="e.g. Technoshashtra" />
+              <input type="text" id="company" name="company" required className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-shadow" placeholder="e.g. TechnoshastraX" />
             </div>
           </div>
 
@@ -54,6 +54,11 @@ export default function NewJobPage() {
           <div>
             <label htmlFor="description" className="block text-sm font-medium text-slate-700 mb-1">Job Description *</label>
             <textarea id="description" name="description" required rows="6" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-shadow" placeholder="Provide detailed information about the role..."></textarea>
+          </div>
+
+          <div>
+            <label htmlFor="link" className="block text-sm font-medium text-slate-700 mb-1">Job Link / PDF URL (Optional)</label>
+            <input type="url" id="link" name="link" className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-shadow" placeholder="e.g. https://company.com/career or PDF link" />
           </div>
 
           <div className="pt-4 flex justify-end gap-4 border-t border-slate-100">

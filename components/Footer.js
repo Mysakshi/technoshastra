@@ -1,43 +1,41 @@
 import Link from 'next/link';
-import { Cpu, Linkedin, Twitter, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { Linkedin, Twitter, Facebook, Instagram, Youtube, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
     <footer className="bg-slate-900 border-t border-slate-800 pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="md:col-span-1">
+        <div className="flex flex-col md:flex-row justify-between gap-12 mb-12">
+          <div className="max-w-sm">
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <Cpu className="h-8 w-8 text-blue-500" />
-              <span className="font-bold text-2xl text-white tracking-tight">Technoshashtra</span>
+              <img src="/logo.jpeg" alt="TechnoshastraX" className="h-10 w-10 object-contain rounded-md shadow-sm" />
+              <span className="font-bold text-2xl text-white tracking-tight">TechnoshastraX</span>
             </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Empowering businesses through scalable, secure, and sustainable IT infrastructure and innovative solutions.
+              Empowering students and developers through learning, collaboration, and opportunity sharing.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/technoshastrax/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-blue-500 transition-colors">
-                <Linkedin className="h-5 w-5" />
+            <div className="flex space-x-3">
+              <a href="https://www.linkedin.com/company/TechnoshastraX/" target="_blank" rel="noopener noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all duration-300 group">
+                <Linkedin className="h-5 w-5 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Twitter className="h-5 w-5" />
+              <a href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 hover:text-white hover:bg-sky-500 hover:border-sky-400 transition-all duration-300 group">
+                <Twitter className="h-5 w-5 group-hover:scale-110 transition-transform" />
               </a>
-              <a href="#" className="text-slate-400 hover:text-blue-600 transition-colors">
-                <Facebook className="h-5 w-5" />
+              <a href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 hover:text-white hover:bg-blue-700 hover:border-blue-600 transition-all duration-300 group">
+                <Facebook className="h-5 w-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="#"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 hover:text-white hover:bg-gradient-to-tr from-amber-500 via-pink-500 to-violet-600 hover:border-pink-400 transition-all duration-300 group">
+                <Instagram className="h-5 w-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a href="https://www.youtube.com/@TechnoShastraX"
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800/50 border border-slate-700 text-slate-400 hover:text-white hover:bg-red-600 hover:border-red-500 transition-all duration-300 group">
+                <Youtube className="h-5 w-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-3">
-              {['Home', 'About', 'Services', 'Jobs', 'Courses', 'Admin'].map((item) => (
-                <li key={item}>
-                  <Link href={item === 'Admin' ? '/admin' : item === 'Home' ? '/' : `/${item.toLowerCase()}`} className="text-slate-400 hover:text-blue-400 transition-colors">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>
@@ -64,14 +62,14 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-slate-400">
                 <Mail className="h-5 w-5 mr-3 text-blue-500 flex-shrink-0" />
-                <span>info@technoshashtra.com</span>
+                <span>info@TechnoshastraX.com</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Technoshashtra Community. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TechnoshastraX. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>

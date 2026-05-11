@@ -1,7 +1,7 @@
 import AdminLayout from "@/components/AdminLayout";
 
 export const metadata = {
-  title: 'Admin Dashboard | Technoshashtra Community',
+  title: 'Admin Dashboard | TechnoshastraX',
 };
 
 export default function Layout({ children }) {

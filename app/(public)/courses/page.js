@@ -3,7 +3,7 @@ import CourseCard from "@/components/CourseCard";
 import { GraduationCap } from 'lucide-react';
 
 export const metadata = {
-  title: 'Tech Courses | Technoshashtra Community',
+  title: 'Tech Courses | TechnoshastraX',
   description: 'Enhance your skills with our expert-led technical courses.',
 };
 

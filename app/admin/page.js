@@ -15,7 +15,7 @@ export default async function AdminDashboardOverview() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
         <div>
           <h1 className="text-4xl font-extrabold text-slate-900 tracking-tight">Dashboard Overview</h1>
-          <p className="text-slate-500 mt-2 text-lg">Welcome back to the Technoshashtra command center.</p>
+          <p className="text-slate-500 mt-2 text-lg">Welcome back to the TechnoshastraX command center.</p>
         </div>
         <div className="text-sm font-medium text-slate-500 bg-white px-4 py-2 rounded-lg border border-slate-200/60 shadow-sm inline-flex items-center">
            <span className="w-2 h-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>

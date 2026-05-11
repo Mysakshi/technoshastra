@@ -1,6 +1,6 @@
 import db from "@/lib/db";
 import Link from "next/link";
-import { Plus, Edit2, Trash2 } from "lucide-react";
+import { Plus, Edit2, Trash2, Briefcase } from "lucide-react";
 import { deleteJob } from "@/app/actions/jobActions";
 import DeleteButton from "@/components/DeleteButton";
 

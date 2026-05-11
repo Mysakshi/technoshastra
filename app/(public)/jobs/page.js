@@ -1,10 +1,11 @@
 import db from "@/lib/db";
 import JobCard from "@/components/JobCard";
 import { Briefcase } from 'lucide-react';
+import PageHero from '@/components/PageHero';
 
 export const metadata = {
-  title: 'Job Opportunities | Technoshashtra Community',
-  description: 'Find your next career opportunity in tech with Technoshashtra Community.',
+  title: 'Job Opportunities | TechnoshastraX',
+  description: 'Find your next career opportunity in tech with TechnoshastraX.',
 };
 
 export const dynamic = 'force-dynamic';
@@ -13,23 +14,23 @@ export default async function JobsPage() {
   const [jobsData] = await db.query("SELECT * FROM jobs ORDER BY created_at DESC");
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen pt-20 pb-32 relative overflow-hidden">
+    <div className="bg-[#f8fafc] min-h-screen flex flex-col w-full relative">
       {/* Decorative Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] opacity-30 pointer-events-none">
-         <div className="absolute inset-x-0 top-0 h-[300px] bg-gradient-to-b from-blue-400/20 to-transparent blur-3xl rounded-full"></div>
-         <div className="absolute right-0 top-20 w-[300px] h-[300px] bg-gradient-to-b from-indigo-400/20 to-transparent blur-3xl rounded-full"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-250 h-100 opacity-30 pointer-events-none">
+         <div className="absolute inset-x-0 top-0 h-75 bg-linear-to-b from-blue-400/20 to-transparent blur-3xl rounded-full"></div>
+         <div className="absolute right-0 top-20 w-75 h-75 bg-linear-to-b from-indigo-400/20 to-transparent blur-3xl rounded-full"></div>
       </div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20 animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-50 rounded-3xl flex items-center justify-center mx-auto mb-8 transform rotate-3 shadow-[0_8px_30px_rgb(37,99,235,0.12)] border border-blue-200/50">
-            <Briefcase className="h-10 w-10 text-blue-600 -rotate-3" />
-          </div>
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-black text-slate-900 mb-6 tracking-tight">Career <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Opportunities</span></h1>
-          <p className="text-xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
-            Join top tech companies and work on products that shape the future. Discover your next great career move below.
-          </p>
-        </div>
+      {/* Hero Section */}
+      <PageHero 
+        label="Career Opportunities"
+        title="Career"
+        highlight="Opportunities"
+        description="Join top tech companies and work on products that shape the future. Discover your next great career move below."
+        imageSrc="https://images.unsplash.com/photo-1573164713988-8665fc963095?q=80&w=2069&auto=format&fit=crop"
+      />
+      
+      <div className="flex-1 w-full relative pb-32 pt-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
 
         {jobsData.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-150 fill-mode-both">
